@@ -94,8 +94,8 @@ public abstract class Triangle { //Created by Zhenia Dude
     public abstract Triangle SetPoints(double[][] Points);
     public abstract Triangle CalculateAttributes();
 
-    @Override
-    public abstract String toString();
+                                        @Override
+                                        public abstract String toString();
 
 
 

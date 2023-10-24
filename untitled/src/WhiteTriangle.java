@@ -2,8 +2,6 @@ public class WhiteTriangle extends Triangle {
 
     private String color;
 
-
-
     public WhiteTriangle(){
         super();
         this.color = "White";
@@ -48,7 +46,8 @@ public class WhiteTriangle extends Triangle {
     {
         String str;
         this.CalculateAttributes();
-        str = "\nColor = "+ this.color + "\n";
+        str = "Shape: Triangle\n";
+        str += "\nColor = "+ this.color + "\n";
         str += "Angles (degrees) = " + round(this.Angles[0] * 57.3, 2) + ", " + round(this.Angles[1] * 57.3, 2) + ", " + round(this.Angles[2] * 57.3, 2)+"\n";
         str += "Edges Length = " + round(this.EdgesLength[0], 2) + ", " + round(this.EdgesLength[1], 2) + ", " + round(this.EdgesLength[2], 2)+"\n";
         str += "Coordinates:\n";

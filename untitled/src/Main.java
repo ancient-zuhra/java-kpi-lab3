@@ -5,20 +5,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        double[][] points = {{1,0,6}, {0,1,0}, {0,0,1}}; //тестування
-        BlackTriangle Black = new BlackTriangle(points);
-        WhiteTriangle White = new WhiteTriangle(points);
+        double[][] points = {{1,0,6}, {0,1,0}, {0,0,1}};
+        BlackTriangle blackTriangle = new BlackTriangle(points);
+        WhiteTriangle whiteTriangle = new WhiteTriangle(points);
+
 
         double[] point = {1,0,0};
-        Black.SetPoint(point, 0);
+        blackTriangle.SetPoint(point, 0);
 
-        System.out.println(Black);
-        System.out.println(White);
+        WhiteCircle whiteCircle = new WhiteCircle(1.0, 0.0, 4.0);
 
-        System.out.println(Black.GetArea());
-        System.out.println(White.GetArea());
+        System.out.println(blackTriangle);
+        System.out.println(whiteTriangle);
 
-        System.out.println(Black.GetMedianPoint(0)[2]);
-        System.out.println(White.GetMedianPoint(0)[1]);
+        System.out.println(blackTriangle.GetArea());
+        System.out.println(whiteTriangle.GetArea());
+
+        System.out.println(blackTriangle.GetMedianPoint(0)[2]);
+        System.out.println(whiteTriangle.GetMedianPoint(0)[1]);
+
+        System.out.println(whiteCircle);
     }
 }
