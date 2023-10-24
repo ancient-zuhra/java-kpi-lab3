@@ -11,9 +11,9 @@ public abstract class Triangle { //Created by Zhenia Dude
         this.Dim = 2;
         this.Points = new double[3][this.Dim];
         for(int i=0; i<this.Dim; i++){
-            this.Points[0][i] = 0f;
-            this.Points[1][i] = 0f;
-            this.Points[2][i] = 0f;
+            this.Points[0][i] = i;
+            this.Points[1][i] = i+1;
+            this.Points[2][i] = i+2;
         }
     }
 
@@ -21,9 +21,9 @@ public abstract class Triangle { //Created by Zhenia Dude
         this.Dim = Dim;
         this.Points = new double[3][Dim];
         for(int i=0; i<Dim; i++){
-            this.Points[0][i] = 0f;
-            this.Points[1][i] = 0f;
-            this.Points[2][i] = 0f;
+            this.Points[0][i] = i;
+            this.Points[1][i] = i+1;
+            this.Points[2][i] = i+2;
         }
     }
     public Triangle(double[][] Points){
@@ -39,9 +39,9 @@ public abstract class Triangle { //Created by Zhenia Dude
         this.Dim = a.Dim;
         double[][] temp = a.GetPoints();
         this.Points = new double[3][Dim];
-        this.Points[0] = temp [0].clone();
-        this.Points[1] = temp [1].clone();
-        this.Points[2] = temp [2].clone();
+        this.Points[0] = temp[0].clone();
+        this.Points[1] = temp[1].clone();
+        this.Points[2] = temp[2].clone();
 
     }
     public double GetArea(){
