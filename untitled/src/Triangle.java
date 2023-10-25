@@ -10,10 +10,9 @@ public abstract class Triangle { //Created by Zhenia Dude
     public Triangle(){
         this.Dim = 2;
         this.Points = new double[3][this.Dim];
-        for(int i=0; i<this.Dim; i++){
-            this.Points[0][i] = i;
-            this.Points[1][i] = i+1;
-            this.Points[2][i] = i+2;
+        for(int i=0, j=0; j<this.Dim; i++, j++){
+            if (i==3){i=0;}
+            this.Points[i][j] += 1;
         }
     }
 
@@ -21,9 +20,8 @@ public abstract class Triangle { //Created by Zhenia Dude
         this.Dim = Dim;
         this.Points = new double[3][Dim];
         for(int i=0; i<Dim; i++){
-            this.Points[0][i] = i;
-            this.Points[1][i] = i+1;
-            this.Points[2][i] = i+2;
+            if (i==3){i=0;}
+            this.Points[i][j] += 1;
         }
     }
     public Triangle(double[][] Points){
@@ -92,10 +90,12 @@ public abstract class Triangle { //Created by Zhenia Dude
     //}
     public abstract Triangle SetPoint(double[] Point, int index);
     public abstract Triangle SetPoints(double[][] Points);
+    public abstract Triangle SetDim(int NewDim);
     public abstract Triangle CalculateAttributes();
+   
 
-                                        @Override
-                                        public abstract String toString();
+    @Override
+    public abstract String toString();
 
 
 
