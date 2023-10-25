@@ -30,6 +30,17 @@ class BlackTriangle extends Triangle{
         this.Points[2] = Points[2].clone();
         return this;
     }
+
+    public WhiteTriangle SetDim(int NewDim){
+        this.Dim = NewDim;
+        this.Points = new double[3][Dim];
+        for(int i=0, j=0; j<this.Dim; i++, j++){
+            if (i==3){i=0;}
+            this.Points[i][j] += 1;
+        }
+        return this;
+    }
+    
     public BlackTriangle Triangle2Black(Triangle input){
         BlackTriangle output = new BlackTriangle(input);
         return output;
