@@ -31,5 +31,12 @@ public class Main {
         client.setCircle(1.0, 0.0, 4.0);
         client.setTriangle(points);
         client.print();
+
+        Client client2 = new Client(new BlackFactory());
+//        client.print();
+
+        client2.setCircle(1.0, 0.0, 4.0);
+        client2.setTriangle(points);
+        client2.print();
     }
 }
